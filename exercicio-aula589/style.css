@@ -1,0 +1,12 @@
+.lista li::before {
+    content: "➜ ";
+    color: red;
+}
+
+.lista li::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background: black;
+    margin-top: 5px;
+}

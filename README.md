@@ -1,2 +1,2 @@
 # curso-js-ts
-Exercicios com conteudo estudo no curso de Javascript e Typescript
+Exercícios com conteúdos estudado no curso de Javascript e Typescript

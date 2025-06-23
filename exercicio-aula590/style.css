@@ -1,0 +1,14 @@
+p {
+    background: green;
+    /*especificidade 0 0 1*/
+}
+
+.paragrafo {
+    background: yellow;
+    /*especificidade 0 1 0*/
+}
+
+p#PG {
+    background: red;
+    /*o que prevalece é o id, por conta que sua especificidade é 1 0 1*/
+}

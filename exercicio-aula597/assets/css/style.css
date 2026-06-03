@@ -1,0 +1,37 @@
+header{
+    position:fixed;
+    font-size: 30px;
+    background-color: blue;
+}
+
+.box1{
+    width: 300px;
+    height: 150px;
+    position: relative;
+    font-size: 20px;
+    left: 50px;
+    top: 100px;    
+}
+
+.boxPai{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    margin: 20px;
+}
+
+.boxFilha{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background-color: yellow;
+}
+
+.botao {
+    position:fixed;
+    bottom: 20px;
+    right: 20px;
+}

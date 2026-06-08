@@ -95,3 +95,10 @@ header{
     color: #ff4757;
     font-weight: bold;
 }
+
+.sticky {
+    position: sticky;
+    top:0;
+    background: orange;
+    padding: 15px;
+}

@@ -1,180 +1,84 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+.caixa-arredondada {
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+    height: 150px;
 }
 
-/* Estilização básica do cabeçalho*/
-header {
-    background-color: #2c3e50;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Tamanho padrão para telas grandes (PCs) */
-.titulo-responsivo {
-    font-size: 3.5rem;
-    font-weight: bold;
-}
-
-/* Media Query para telas médias (Tablets) */
-@media (max-width: 1024px) {
-    .titulo-responsivo{
-        font-size: 2.5rem;
-    }
-}
-
-/* Media Query para telas pequenas (Celulares)*/
-@media (max-width: 768px) {
-    .titulo-responsivo{
-        font-size: 1.8rem;
-    }
-}
-
-/* Estilização da barra de navegação */
-.navbar {
-    background-color: #333;
-    padding: 15px 20px;
-}
-
-/* Lista de links */
-.nav-lista {
-    list-style: none;
-    display: flex; /* PC: lado a lado*/
-    gap:20px;
-    justify-content: center;
-}
-
-.nav-item a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-.nav-item a:hover{
-    color: #4CAF50; /* Cor ao passsar o mouse */
-}
-
-/*Responsavidade para Mobile (telas até 768px) */
-@media (max-width: 768px) {
-    .nav-lista {
-        flex-direction: column; /* Mobile: empilhado */
-        align-items: center;
-        gap: 15px
-    }
-}
-
-.cards-container {
-    display: grid;
-    /* Configuração padrão para mobile: 1 coluna */
-    grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 16px;
-}
-
-/* Tablet: 2 colunas */
-@media (min-width: 768px) {
-    .cards-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* PC: 4 colunas */
-@media (min-width: 1024px) {
-    .cards-container {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-/* Estilização básica dos cards para visualização */
-.card {
-    background-color: #f0f0f0;
-    padding: 40px 20px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Configuração básica e mobile: cor azul */
-.caixa-adaptavel {
-    width: 100%;
-    max-width: 400px;
-    height: 200px;
-    margin: 20px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.botao-personalizado {
+    background-color: #4CAF50;
     color: white;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-
-    /* Cor para mobile: vermelho*/
-    background-color: #e74c3c;
+    padding: 10px 20px;
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Tablet: cor Verde */
-@media (min-width: 768px) {
-    .caixa-adaptavel {
-        background-color: #2ecc71;
-    }
-}
-
-/* PC: cor Azul */
-@media (min-width: 1024px) {
-    .caixa-adaptavel {
-        background-color: #3498db;
-    }
-}
-
-/* Configuração geral e base para Mobile */
-.rodape-simples {
-    background-color: #222;
-    color: #fff;
+.card-produto {
+    border: 1px solid #ccc;
+    border-radius: 10px;
     padding: 20px;
-    font-family: sans-serif;
-    font-size: 14px;
-}
-
-.rodape-conteudo {
-    display: flex;
-    flex-direction: column; /* Alinha em coluna no mobile */
-    align-items: center;
+    width: 200px;
     text-align: center;
-    gap: 12px;
 }
 
-.rodape-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column; /* Links empilhados no mobile para melhor clique */
-    gap: 12px;
+.imagem-produto {
+    width: 100%;
+    height: 150px;
+    background-color: #eee;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-.rodape-links a {
-    color: #bbb;
-    text-decoration: none;
+.avatar {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 20px auto;
 }
 
-.rodape-links a:hover {
-    color: #fff;
+.caixa-cantos-diferentes {
+    width: 200px;
+    height: 100px;
+    background-color: #000;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 5px;
+    margin: 20px auto;
+}  
+
+.capsula {
+    display: inline-block;
+    background-color: #f00;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 999px;
+    font-weight: bold;
 }
 
-/* Ajustes para PC */
-@media (min-width: 768px) {
-    .rodape-conteudo {
-        flex-direction: row; /* Alinha em linha no PC */
-        justify-content: center; /* Centraliza todo o conteúdo */
-        gap: 40px; /* Espaço maior entre o texto e os links */
-    }
+.perfil-usuario {
+    text-align: center;
+    padding: 20px;
+}
 
-    .rodape-links {
-        flex-direction: row; /* Links ficam lado a lado */
-        gap: 20px;
-    }
+.avatar-perfil {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+.botao-seguir {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }

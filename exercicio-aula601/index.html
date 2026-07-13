@@ -1,0 +1,103 @@
+<!--Crie uma página contendo os seguintes elementos:
+
+1. Caixa com sombra
+Crie uma <div> contendo um pequeno texto.
+Requisitos:
+Defina largura e altura.
+Adicione uma cor de fundo.
+Aplique uma sombra ao redor da caixa utilizando box-shadow.
+
+2. Botão com efeito de profundidade
+Crie um botão com o texto:
+Entrar
+Requisitos:
+O botão deve possuir uma sombra que dê a impressão de estar elevado.
+Ao passar o mouse sobre ele (:hover), altere a sombra para dar a sensação de que o botão ficou ainda mais próximo do usuário.
+
+3. Card de Produto
+Crie um card contendo:
+Área para imagem (pode ser apenas uma <div>)
+Nome do produto
+Descrição curta
+Preço
+Botão "Comprar"
+Requisitos:
+O card deve possuir uma sombra suave.
+O botão também deve possuir uma sombra diferente da do card.
+
+4. Avatar
+Crie um avatar circular.
+Requisitos:
+Utilize uma sombra ao redor dele para destacá-lo.
+O avatar deve permanecer circular.
+
+5. Caixa com sombra interna
+Crie uma nova caixa.
+Requisitos:
+Utilize uma sombra interna (inset).
+Escolha uma cor de fundo que permita visualizar bem esse efeito.
+
+6. Destaque de Informação
+Crie um pequeno aviso com o texto:
+Importante
+Requisitos:
+Utilize uma sombra para destacar esse elemento dos demais.
+Escolha cores que combinem entre si.
+
+🎯 Desafio Final
+Monte um cartão de perfil contendo:
+Avatar
+Nome
+Cargo
+Botão "Seguir"
+Requisitos:
+O cartão deve possuir uma sombra principal.
+O avatar deve possuir uma sombra própria.
+O botão deve possuir outra sombra.
+Ao passar o mouse sobre o cartão, aumente levemente a intensidade da sombra para destacar o componente.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Aula 601: Box Shadow</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <div class="box-shadow">
+        <p>Caixa com sombra</p>
+    </div>
+
+    <button class="btn-shadow">Entrar</button>
+
+    <div class="card">
+        <div class="card-image"></div>
+        <h3>Nome do Produto</h3>
+        <p>Descrição curta do produto.</p>
+        <p>Preço: R$ 99,99</p>
+        <button class="btn-card">Comprar</button>
+    </div>
+
+    <div class="avatar"></div>
+
+    <div class="box-shadow-inset">
+        <p>Caixa com sombra interna</p> 
+    </div>
+
+    <div class="info">
+        <p>Importante</p>   
+    </div>
+
+    <div class="profile-card">
+        <div class="profile-avatar"></div>
+        <h3>Nome do Usuário</h3>
+        <p>Cargo do Usuário</p>
+        <button class="btn-follow">Seguir</button>
+    </div>
+</body>
+
+</html>

@@ -1,4 +1,94 @@
-<!--
+<!--Exercício - Flexbox (Aulas 602, 603, 604 e 605)
+Crie uma página simulando a página inicial de uma loja virtual utilizando apenas HTML + CSS + Flexbox.
+
+1. Cabeçalho
+Crie um cabeçalho contendo:
+Logo da empresa.
+Menu com:
+Home
+Produtos
+Sobre
+Contato
+Um botão escrito:
+Entrar
+Requisitos
+Todos os elementos devem ficar alinhados horizontalmente.
+Utilize Flexbox para realizar os alinhamentos.
+Os itens devem possuir espaçamentos adequados entre si.
+
+2. Seção Principal (Banner)
+Crie uma seção contendo:
+Um título.
+Um pequeno texto descritivo.
+Dois botões:
+Comprar
+Saiba Mais
+Requisitos
+Os botões devem ficar um ao lado do outro.
+Todo o conteúdo deve ficar centralizado na página.
+Utilize Flexbox para realizar o alinhamento.
+
+3. Área de Produtos
+Crie 6 cards de produtos contendo:
+Imagem (pode ser apenas uma <div>)
+Nome do produto
+Preço
+Botão "Comprar"
+Requisitos
+Os cards devem ficar lado a lado.
+Quando não houver mais espaço, eles devem quebrar automaticamente para a próxima linha.
+Todos os cards devem possuir o mesmo tamanho.
+Utilize Flexbox para fazer a distribuição dos elementos.
+
+4. Card de Perfil
+Crie um card contendo:
+Avatar
+Nome do usuário
+Cargo
+Botão "Seguir"
+Requisitos
+Todos os elementos devem ficar centralizados.
+Utilize Flexbox para realizar os alinhamentos.
+
+5. Painel Administrativo
+Crie um pequeno painel contendo 4 caixas:
+Usuários
+Pedidos
+Produtos
+Financeiro
+Requisitos
+As quatro caixas devem ocupar toda a largura disponível.
+Todas devem possuir o mesmo tamanho.
+Deve existir um espaçamento entre elas.
+Utilize Flexbox para fazer a distribuição do espaço disponível.
+
+6. Rodapé
+Crie um rodapé contendo:
+Direitos reservados.
+Redes sociais:
+Instagram
+Facebook
+LinkedIn
+Requisitos
+Em telas grandes, tudo deve ficar em uma única linha.
+Utilize Flexbox para alinhar os elementos.
+
+🎯 Desafio Final
+Sem pesquisar, tente implementar os seguintes comportamentos utilizando apenas Flexbox:
+Cabeçalho
+Logo alinhada à esquerda.
+Menu centralizado.
+Botão alinhado à direita.
+Produtos
+Os cards devem se ajustar automaticamente conforme o tamanho da tela.
+Nenhum card pode ficar maior ou menor do que os demais.
+Perfil
+Avatar perfeitamente centralizado.
+Todos os elementos devem possuir o mesmo espaçamento vertical.
+Painel Administrativo
+Faça com que as quatro caixas:
+Cresçam igualmente quando houver espaço disponível.
+Mantenham o mesmo tamanho visual entre si.
 -->
 
 <!DOCTYPE html>
@@ -15,7 +105,7 @@
     <header class="cabecalho">
         <a href="#" class="logo">Logo</a>
         <nav class="nav-menu">
-            <ul>
+            <ul class="menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Produtos</a></li>
                 <li><a href="#">Sobre</a></li>
@@ -24,6 +114,76 @@
             <button class="btn-entrar">Entrar</button>
         </nav>
     </header>
+
+    <banner class="banner">
+        <h1>Bem-vindo ao nosso site!</h1>
+        <p>Explore nossos produtos e serviços.</p>
+        <div>
+            <button class="btn-comprar">Comprar</button>
+            <button class="btn-saiba-mais">Saiba Mais</button>
+        </div>
+    </banner>
+    <div class="cards">
+        <div class="card-one">
+            <img src="#" alt="Imagem do Produto" />
+            <h2>Nome do Produto</h2>
+            <p>R$ 99,90</p>
+            <button class="btn-card-comprar">Comprar</button>
+        </div>
+            <div class="card-two">
+            <img src="#" alt="Imagem do Produto" />
+            <h2>Nome do Produto</h2>
+            <p>R$ 99,90</p>
+            <button class="btn-card-comprar">Comprar</button>
+        </div>
+            <div class="card-three">
+            <img src="#" alt="Imagem do Produto" />
+            <h2>Nome do Produto</h2>
+            <p>R$ 99,90</p>
+            <button class="btn-card-comprar">Comprar</button>
+        </div>
+            <div class="card-four">
+            <img src="#" alt="Imagem do Produto" />
+            <h2>Nome do Produto</h2>
+            <p>R$ 99,90</p>
+            <button class="btn-card-comprar">Comprar</button>
+        </div>
+            <div class="card-five">
+            <img src="#" alt="Imagem do Produto" />
+            <h2>Nome do Produto</h2>
+            <p>R$ 99,90</p>
+            <button class="btn-card-comprar">Comprar</button>
+        </div>
+            <div class="card-six">
+            <img src="#" alt="Imagem do Produto" />
+            <h2>Nome do Produto</h2>
+            <p>R$ 99,90</p>
+            <button class="btn-card-comprar">Comprar</button>
+        </div>
+    </div>
+
+    <div class="perfil">
+        <div class="perfil-avatar">
+            <img src="#" alt="Avatar do Usuário" class="avatar-img"/> 
+        </div>
+        <div class="perfil-info">
+            <h2>Nome do Usuário</h2>
+            <p>Cargo do Usuário</p>
+            <button class="btn-seguir">Seguir</button>
+        </div>
+    </div>
+
+    <div class="painel-adm">
+        <div class="caixa">Usuários</div>    
+        <div class="caixa">Pedidos</div>    
+        <div class="caixa">Produtos</div>    
+        <div class="caixa">Financeiro</div>    
+    </div>
+
+    <div class="rodape">
+        <p>&copy; 2026 Minha Empresa. Todos os direitos reservados.</p>
+        <p>Redes sociais: <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">LinkedIn</a></p>
+    </div>
 </body>
 
-</html>
+</html> 

@@ -6,7 +6,7 @@
 
 .cabecalho {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 15px;
 }
 
@@ -25,6 +25,8 @@
 }
 
 .banner {
+    display:flex;
+    flex-direction:column;
     justify-content: space-around;
     align-items: center;
     text-align: center;
@@ -33,6 +35,7 @@
 .cards{
     display: flex;
     flex-wrap: wrap;
+    flex-basis: 100%;
 }
 
 .card-one {
@@ -126,6 +129,8 @@
 }
 
 .perfil {
+    display:flex;
+    flex-direction:column;
     justify-content: space-around;
     align-items: center;
     text-align: center;

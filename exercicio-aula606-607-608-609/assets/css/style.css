@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: sans-serif;
+    font-size: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+}
+
+.header{
+    display: grid;
+    grid-template-areas: "logo menu";
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #333;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    justify-self: end;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    color: #4CAF50;
+}
+
+.banner-principal {
+    grid-area: banner;
+    background-color: #f4f4f4;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.btn-comprar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}

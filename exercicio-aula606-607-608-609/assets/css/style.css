@@ -2,51 +2,53 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body {
-    font: sans-serif;
+    background-color: #f0f2f5;
+    font-family: sans-serif;
     font-size: 20px;
+    padding: 10px;
 }
 
 .container {
+    display: grid;
     max-width: 1200px;
     margin: 0 auto;
+    grid-template-areas:"header header"
+                            "banner banner"
+                            "conteudo sidebar"
+                            "galeria galeria"
+                            "rodape rodape";
 }
 
-.grid {
+.header-container{
+    grid-area: header;
     display: grid;
-}
-
-.header{
-    display: grid;
-    grid-template-areas: "logo menu";
     grid-template-columns: auto 1fr;
     align-items: center;
-    padding: 20px 40px;
-    background-color: #333;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
 }
 
-.logo {
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.menu {
-    justify-self: end;
-    display: grid;
-    grid-auto-flow: column;
+.navigation ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
     gap: 20px;
 }
 
-.menu a {
-    color: #fff;
+.navigation a {
     text-decoration: none;
-    font-size: 16px;
+    color: #333;
+    font-weight: 500;
 }
 
-.menu a:hover {
+.navigation a:hover {
     color: #4CAF50;
 }
 
@@ -65,3 +67,133 @@ body {
     cursor: pointer;
     font-size: 16px;
 }
+
+.conteudo-principal {
+    grid-area: conteudo;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:20px;
+}
+
+/*.artigo-destaque {
+    grid-column: span 3;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    box-sizing: border-box;
+}*/
+.artigo {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #ccc;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.news-image {
+    width: 100%;
+    height: 150px;
+    background-color: #e0e0e0;
+    margin-bottom: 10px;
+}
+
+.sidebar-container {
+    grid-area: sidebar;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    min-height: 100%;
+}
+
+.sidebar-container h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.sidebar-menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.sidebar-item {
+    text-decoration: none;
+    color: #444;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.sidebar-item:hover {
+    background-color: #e8f0fe;
+    color: #1a73e8;
+}
+
+.gallery-container {
+    grid-area: galeria;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery-item {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    font-family: sans-serif;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+  /* Cores diferentes para simular as imagens */
+  .item-1 { background-color: #3498db; }
+  .item-2 { background-color: #e74c3c; }
+  .item-3 { background-color: #2ecc71; }
+  .item-4 { background-color: #f1c40f; }
+  .item-5 { background-color: #9b59b6; }
+  .item-6 { background-color: #e67e22; }
+  .item-7 { background-color: #1abc9c; }
+  .item-8 { background-color: #34495e; }
+
+  .footer-container {
+    grid-area: rodape;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+    font-family: sans-serif;
+  }
+
+  .copyright {
+    margin:0;
+    font-size: 0.9rem;
+    color: #bbb;
+  }
+
+  .social-medias {
+    display: grid;
+    /*Colocar os links de redes socias lado a lado dentro do seu próprio grid*/
+    grid-template-columns: repeat(3, auto);
+    gap: 15px;
+  }
+
+  .social-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+
+  .social-link:hover {
+    color: #3498db;
+  }

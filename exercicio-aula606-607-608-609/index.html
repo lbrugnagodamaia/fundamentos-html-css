@@ -1,4 +1,126 @@
 <!--
+Objetivo
+
+Crie uma página inicial de um portal de notícias utilizando CSS Grid.
+
+Você deverá utilizar:
+
+display: grid
+grid-template-columns
+grid-template-rows
+gap
+grid-column
+grid-row
+grid-template-areas
+
+1. Estrutura da Página
+A página deve possuir:
+Header
+Menu
+Banner Principal
+Conteúdo Principal
+Barra Lateral
+Galeria
+Rodapé
+
+2. Header
+
+O cabeçalho deve conter:
+Logo
+Menu de navegação
+Requisitos
+Utilize Grid.
+Os elementos devem ficar lado a lado.
+Defina colunas utilizando grid-template-columns.
+
+3. Banner
+Crie um banner contendo:
+Um título
+Um texto
+Um botão
+Requisitos
+Centralize todo o conteúdo utilizando Grid.
+
+4. Área de Conteúdo
+Crie uma área contendo 6 notícias.
+Cada notícia deve possuir:
+Imagem (pode ser uma div)
+Título
+Pequena descrição
+Requisitos
+Utilize Grid.
+Organize as notícias em colunas.
+Utilize gap para criar espaçamento.
+As notícias devem manter o mesmo tamanho.
+
+5. Sidebar
+Crie uma barra lateral contendo:
+Categorias
+Tecnologia
+Esportes
+Economia
+Contato
+Requisitos
+Utilize Grid.
+Os itens devem ficar um abaixo do outro.
+
+6. Galeria
+Crie uma galeria com 8 imagens.
+(Podem ser apenas divs coloridas.)
+Requisitos
+Utilize Grid.
+Organize as imagens em várias colunas.
+Utilize gap.
+
+7. Rodapé
+Crie um rodapé contendo:
+Direitos reservados
+Redes sociais
+Requisitos
+Utilize Grid para organizar os elementos.
+
+🎯 Desafio Final (Grid Template Areas)
+Agora monte toda a página utilizando apenas Grid Areas.
+Crie um layout semelhante a este:
+
++-----------------------------------------+
+|               HEADER                    |
++-----------------------------------------+
+|                 MENU                    |
++-----------------------------------------+
+|               BANNER                    |
++--------------------------+--------------+
+|                          |              |
+|                          |              |
+|        CONTEÚDO          |   SIDEBAR   |
+|                          |              |
+|                          |              |
++--------------------------+--------------+
+|             GALERIA                    |
++-----------------------------------------+
+|               RODAPÉ                   |
++-----------------------------------------+
+Requisitos do Desafio
+Utilize obrigatoriamente:
+grid-template-areas
+grid-area
+grid-template-columns
+grid-template-rows
+gap
+
+Desafio Extra
+Na área de notícias:
+Faça uma notícia principal ocupar um espaço maior que as demais.
+Exemplo:
++-----------+-----------+-----------+
+|           |           |           |
+|  NOTÍCIA  | Notícia   | Notícia   |
+| PRINCIPAL |           |           |
+|           +-----------+-----------+
+|           | Notícia   | Notícia   |
++-----------+-----------+-----------+
+
+Você deverá descobrir sozinho como fazer isso utilizando Grid.
 -->
 
 <!DOCTYPE html>
@@ -13,15 +135,18 @@
 
 <body>
     <div class="container">
-        <div class="grid">
-            <header class="header">
-                <div class="logo">Logo</div>
-                <nav class="menu">
-                    <a href="#">Home</a>
-                    <a href="#">Sobre</a>
-                    <a href="#">Serviços</a>
-                    <a href="#">Contato</a>
-                </nav>
+            <header class="header-container">
+                <div class="logo">
+                    <h1>Logo</h1>
+                </div>
+                <nav class="navigation">
+                <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
             </header>
             <div class="banner-principal">
                 <h1>Bem-vindo ao nosso site!</h1>
@@ -29,23 +154,65 @@
                 <button class="btn-comprar">Comprar</button>
             </div>
             <div class="conteudo-principal">
-                <img src="https://images.unsplash.com/photo-1682685790910-1e3f5c7d8b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Imagem Principal">
-                <h2>Conteúdo Principal</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                <article class="artigo-destaque">
+                    <div class="news-image">imagem</div>
+                    <h3>Notícia 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                </article>
+                <article class="artigo">
+                    <div class="news-image">imagem</div>
+                    <h3>Notícia 2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                </article>
+                <article class="artigo">
+                    <div class="news-image">imagem</div>
+                    <h3>Notícia 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                </article>
+                <article class="artigo">
+                    <div class="news-image">imagem</div>
+                    <h3>Notícia 4</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p> 
+                </article>
+                <article class="artigo">
+                    <div class="news-image">imagem</div>
+                    <h3>Notícia 5</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+                </article>
+                <article class="artigo">
+                    <div class="news-image">imagem</div>
+                    <h3>Notícia 6</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p> 
+                </article>
             </div>
-            <div class="barra-lateral">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
+            
+            <aside class="sidebar-container">
+                <h2>Categorias</h2>
+                <nav class="sidebar-navigation">
+                    <a href="#" class="sidebar-item">Tecnologia</a>
+                    <a href="#" class="sidebar-item">Esportes</a>
+                    <a href="#" class="sidebar-item">Economia</a>
+                    <a href="#" class="sidebar-item">Contato</a>
+                </nav>
+            </aside>
+            <div class="gallery-container">   
+                <div class="gallery-item item-1">Imagem 1</div>
+                <div class="gallery-item item-2">Imagem 2</div>
+                <div class="gallery-item item-3">Imagem 3</div>
+                <div class="gallery-item item-4">Imagem 4</div>
+                <div class="gallery-item item-5">Imagem 5</div>
+                <div class="gallery-item item-6">Imagem 6</div>
+                <div class="gallery-item item-7">Imagem 7</div>
+                <div class="gallery-item item-8">Imagem 8</div>
             </div>
-            <div class="galeria">   
-                <img src="https://images.unsplash.com/photo-1682685790910-1e3f5c7d8b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Imagem 1">
-                <img src="https://images.unsplash.com/photo-1682685790910-1e3f5c7d8b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Imagem 2">
-                <img src="https://images.unsplash.com/photo-1682685790910-1e3f5c7d8b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Imagem 3">
-            </div>
-            <div class="rodape">
-                <p>Rodapé</p>
-            </div>
-        </div>
-       
+            <footer class="footer-container">
+                <p class="copyright">&copy; 2026 Meu Site. Todos os direitos reservados.</p>
+                <div class="social-medias">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                </div>
+            </footer>
     </div>
 </body>
 

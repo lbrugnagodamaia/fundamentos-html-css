@@ -14,8 +14,10 @@ body {
 
 .container {
     display: grid;
+    gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    grid-template-columns: 3 fr 1fr;
     grid-template-areas:"header header"
                             "banner banner"
                             "conteudo sidebar"
@@ -56,7 +58,8 @@ body {
     grid-area: banner;
     background-color: #f4f4f4;
     padding: 60px 40px;
-    text-align: center;
+    display: grid;
+    place-items: center;
 }
 
 .btn-comprar {
@@ -75,13 +78,15 @@ body {
     gap:20px;
 }
 
-/*.artigo-destaque {
-    grid-column: span 3;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 15px;
-    box-sizing: border-box;
-}*/
+.destaque {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.destaque .news-image {
+    height: 250px;
+}
+
 .artigo {
     display: flex;
     flex-direction: column;
@@ -112,7 +117,7 @@ body {
     font-size: 1.2rem;
 }
 
-.sidebar-menu {
+.sidebar-navigation {
     display: grid;
     grid-template-columns: 1fr;
     gap: 15px;
